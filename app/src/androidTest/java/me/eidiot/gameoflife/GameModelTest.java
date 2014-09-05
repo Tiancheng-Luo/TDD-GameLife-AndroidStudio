@@ -14,4 +14,9 @@ public class GameModelTest extends TestCase {
         assertEquals(3, instance.getRows());
         assertEquals(3, instance.getColumns());
     }
+
+    public void test_is_alive() throws Exception {
+        assertFalse(instance.isAlive(0, 0));
+
+    }
 }

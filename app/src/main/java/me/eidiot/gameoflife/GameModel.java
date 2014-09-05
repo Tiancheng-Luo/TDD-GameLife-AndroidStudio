@@ -16,4 +16,8 @@ public class GameModel {
     public int getColumns() {
         return columns;
     }
+
+    public boolean isAlive(int row, int column) {
+        return false;
+    }
 }
