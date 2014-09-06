@@ -22,10 +22,16 @@ public class GameModel {
     }
 
     public boolean isAlive(int row, int column) {
-        return map[row][column];
+        return !isOutOfMap(row, column) && map[row][column];
     }
 
     public void makeAlive(int row, int column) {
-        map[row][column] = true;
+        if (!isOutOfMap(row, column)) {
+            map[row][column] = true;
+        }
+    }
+
+    private boolean isOutOfMap(int row, int column) {
+        return row < 0 || row > rows - 1 || column < 0 || column > columns - 1;
     }
 }
