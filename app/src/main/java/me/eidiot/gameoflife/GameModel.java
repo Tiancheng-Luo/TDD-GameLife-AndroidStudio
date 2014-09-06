@@ -49,7 +49,7 @@ public class GameModel {
         if (isAlive(row, column)) {
             return aliveNeighbours == 2 || aliveNeighbours == 3;
         }
-        return false;
+        return aliveNeighbours == 3;
     }
 
     private boolean isOutOfMap(int row, int column) {
