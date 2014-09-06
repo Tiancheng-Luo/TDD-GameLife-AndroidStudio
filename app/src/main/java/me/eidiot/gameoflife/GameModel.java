@@ -37,6 +37,21 @@ public class GameModel {
         }
     }
 
+    public boolean willLive(int row, int column) {
+        int aliveNeighbours = 0;
+        for (int i = row - 1; i <= row + 1; i++) {
+            for (int j = column - 1; j <= column + 1; j++) {
+                if (!(i == row && j == column) && isAlive(i, j)) {
+                    aliveNeighbours++;
+                }
+            }
+        }
+        if (isAlive(row, column)) {
+            return aliveNeighbours == 2 || aliveNeighbours == 3;
+        }
+        return false;
+    }
+
     private boolean isOutOfMap(int row, int column) {
         return row < 0 || row > rows - 1 || column < 0 || column > columns - 1;
     }
