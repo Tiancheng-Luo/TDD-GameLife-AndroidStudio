@@ -33,4 +33,15 @@ public class GameModelTest extends TestCase {
         instance.makeAlive(3, 0);
         instance.makeAlive(0, 3);
     }
+
+    public void test_make_dead() throws Exception {
+        instance.makeAlive(0, 0);
+        instance.makeDead(0, 0);
+        assertFalse(instance.isAlive(0, 0));
+
+        instance.makeDead(-1, 0);
+        instance.makeDead(0, -1);
+        instance.makeDead(3, 0);
+        instance.makeDead(0, 3);
+    }
 }

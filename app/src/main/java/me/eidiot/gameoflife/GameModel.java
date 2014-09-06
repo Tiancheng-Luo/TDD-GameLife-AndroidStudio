@@ -31,6 +31,12 @@ public class GameModel {
         }
     }
 
+    public void makeDead(int row, int column) {
+        if (!isOutOfMap(row, column)) {
+            map[row][column] = false;
+        }
+    }
+
     private boolean isOutOfMap(int row, int column) {
         return row < 0 || row > rows - 1 || column < 0 || column > columns - 1;
     }
