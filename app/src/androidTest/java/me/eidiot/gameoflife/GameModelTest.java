@@ -19,4 +19,9 @@ public class GameModelTest extends TestCase {
         assertFalse(instance.isAlive(0, 0));
 
     }
+
+    public void test_make_alive() throws Exception {
+        instance.makeAlive(0, 0);
+        assertTrue(instance.isAlive(0, 0));
+    }
 }
