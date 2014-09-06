@@ -52,6 +52,16 @@ public class GameModel {
         return aliveNeighbours == 3;
     }
 
+    public void next() {
+        boolean newMap[][] = new boolean[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                newMap[i][j] = willLive(i, j);
+            }
+        }
+        map = newMap;
+    }
+
     private boolean isOutOfMap(int row, int column) {
         return row < 0 || row > rows - 1 || column < 0 || column > columns - 1;
     }

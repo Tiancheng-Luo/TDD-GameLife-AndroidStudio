@@ -61,6 +61,9 @@ public class GameModelTest extends TestCase {
 
         instance.makeAlive(2, 2);
         assertFalse(instance.willLive(1, 1));
+
+        instance.next();
+        assertFalse(instance.isAlive(1, 1));
     }
 
     public void test_dead_cell() throws Exception {
@@ -77,5 +80,8 @@ public class GameModelTest extends TestCase {
 
         instance.makeAlive(2, 2);
         assertFalse(instance.willLive(1, 1));
+
+        instance.next();
+        assertFalse(instance.isAlive(1, 1));
     }
 }
