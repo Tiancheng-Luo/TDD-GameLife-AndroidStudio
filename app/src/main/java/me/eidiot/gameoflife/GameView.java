@@ -38,7 +38,10 @@ public class GameView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        int size = 20;
+        if (model == null) {
+            return;
+        }
+        int size = (int) getResources().getDimension(R.dimen.cell_size);
         for (int i = 0; i < model.getRows(); i++) {
             for (int j = 0; j < model.getColumns(); j++) {
                 int left = size * i;
