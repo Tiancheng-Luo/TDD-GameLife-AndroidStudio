@@ -1,4 +1,4 @@
-Code of [each step](https://github.com/evan-liu/TDD-GameLife-AndroidStudio/releases) for [TDD Demo GameOfLife with Android Studio](http://evancoding/2014/09/06/TDD-Demo-GameOfLife-with-Android-Studio/)
+Code of [each step](https://github.com/evan-liu/TDD-GameLife-AndroidStudio/releases) for [TDD Demo GameOfLife with Android Studio](http://evancoding.com/2014/09/06/TDD-Demo-GameOfLife-with-Android-Studio/)
  
 - [Create GameOfLife Project](https://github.com/evan-liu/TDD-GameLife-AndroidStudio/releases/tag/01CreateProject)
 - [Create class `GameModel` and test case `GameModelTest`](https://github.com/evan-liu/TDD-GameLife-AndroidStudio/releases/tag/02TestCase)
